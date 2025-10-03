@@ -9,7 +9,7 @@ A modernised Jordan-themed e-commerce sample built with ASP.NET Core MVC. The ap
 
    ```bash
    dotnet restore
-   dotnet run
+   dotnet run --project src/Jordan2.UI/Jordan2.UI.csproj
    ```
 
 3. Navigate to `https://localhost:5001` (or the port shown in the console) to explore the storefront.
@@ -21,16 +21,14 @@ A modernised Jordan-themed e-commerce sample built with ASP.NET Core MVC. The ap
 - Session backed cart service with add, remove, clear, and checkout flows.
 - Responsive UI tailored for the Jordan brand, including product galleries and order confirmation pages.
 
-## Project structure
+## Solution layout
 
 ```
-Jordan2/
-├── Controllers/        # MVC controllers for home, product, and cart flows
-├── Models/             # Domain models, repositories, and cart services
-├── ViewModels/         # View specific DTOs
-├── Views/              # Razor views and shared layout
-├── wwwroot/            # Static assets (CSS, images)
-└── Program.cs          # Application entry point
+Jordan2.sln              # Multi-project solution entry point
+└── src/
+    ├── Jordan2.UI/      # ASP.NET Core MVC front-end (controllers, views, static assets)
+    ├── Jordan2.Server/  # Domain models, repositories, and cart services
+    └── Jordan2.Client/  # View models and client-facing DTOs consumed by the UI
 ```
 
 ## Screenshots

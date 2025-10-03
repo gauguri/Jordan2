@@ -2,7 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan2", "Jordan2.csproj", "{29C0A5EC-8C82-4580-8CBD-D40255C62FC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan2.UI", "src/Jordan2.UI/Jordan2.UI.csproj", "{5472FDFD-09A1-420F-A26D-64861708EDEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan2.Server", "src/Jordan2.Server/Jordan2.Server.csproj", "{1B9C1CFE-62FC-4832-93B3-73EA027D54F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jordan2.Client", "src/Jordan2.Client/Jordan2.Client.csproj", "{2F0A59AD-0786-489F-BD2C-D1C08112FBBB}"
 EndProject
 Global
 GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +14,23 @@ Debug|Any CPU = Debug|Any CPU
 Release|Any CPU = Release|Any CPU
 EndGlobalSection
 GlobalSection(ProjectConfigurationPlatforms) = postSolution
-{29C0A5EC-8C82-4580-8CBD-D40255C62FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-{29C0A5EC-8C82-4580-8CBD-D40255C62FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-{29C0A5EC-8C82-4580-8CBD-D40255C62FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-{29C0A5EC-8C82-4580-8CBD-D40255C62FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+{5472FDFD-09A1-420F-A26D-64861708EDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{5472FDFD-09A1-420F-A26D-64861708EDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{5472FDFD-09A1-420F-A26D-64861708EDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{5472FDFD-09A1-420F-A26D-64861708EDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+{1B9C1CFE-62FC-4832-93B3-73EA027D54F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{1B9C1CFE-62FC-4832-93B3-73EA027D54F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{1B9C1CFE-62FC-4832-93B3-73EA027D54F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{1B9C1CFE-62FC-4832-93B3-73EA027D54F2}.Release|Any CPU.Build.0 = Release|Any CPU
+{2F0A59AD-0786-489F-BD2C-D1C08112FBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{2F0A59AD-0786-489F-BD2C-D1C08112FBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{2F0A59AD-0786-489F-BD2C-D1C08112FBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{2F0A59AD-0786-489F-BD2C-D1C08112FBBB}.Release|Any CPU.Build.0 = Release|Any CPU
 EndGlobalSection
 GlobalSection(SolutionProperties) = preSolution
 HideSolutionNode = FALSE
 EndGlobalSection
 GlobalSection(ExtensibilityGlobals) = postSolution
-SolutionGuid = {36AB311D-9696-4634-8C3A-AEDB6D2DAAE6}
+SolutionGuid = {251CC226-068C-402A-B417-269726A5B298}
 EndGlobalSection
 EndGlobal

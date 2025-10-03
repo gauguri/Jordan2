@@ -2,7 +2,7 @@ using System.Collections.Concurrent;
 using System.Linq;
 using System.Threading;
 
-namespace Jordan2.Models;
+namespace Jordan2.Server.Models;
 
 public class InMemoryOrderRepository : IOrderRepository
 {

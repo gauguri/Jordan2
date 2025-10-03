@@ -1,7 +1,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace Jordan2.Models;
+namespace Jordan2.Server.Models;
 
 public class InMemoryProductRepository : IProductRepository
 {
