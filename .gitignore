@@ -1,1 +1,6 @@
 *.png
+# .NET build artifacts
+bin/
+obj/
+Debug/
+Release/
