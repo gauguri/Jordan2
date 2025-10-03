@@ -1,0 +1,42 @@
+@model Product
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<section class="product-hero">
+    <div>
+        <img src="@Model.Photos.FirstOrDefault() ?? Model.Preview" alt="@Model.Name" id="heroImage" />
+        <div class="product-gallery">
+            @foreach (var photo in Model.Photos)
+            {
+                <img src="@photo" alt="@Model.Name" data-photo="@photo" class="@(photo == Model.Photos.First() ? "active" : string.Empty)" />
+            }
+        </div>
+    </div>
+    <div class="product-meta">
+        <div>
+            <h1>@Model.Name</h1>
+            <p>@Model.Brand</p>
+        </div>
+        <div class="price">₹ @Model.Price.ToString("N0")</div>
+        <p>@Model.Description</p>
+        <form asp-action="AddToCart" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="id" value="@Model.Id" />
+            <button class="button" type="submit">Add to cart</button>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        const heroImage = document.getElementById('heroImage');
+        document.querySelectorAll('.product-gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                heroImage.src = img.dataset.photo;
+                document.querySelectorAll('.product-gallery img').forEach(i => i.classList.remove('active'));
+                img.classList.add('active');
+            });
+        });
+    </script>
+}
