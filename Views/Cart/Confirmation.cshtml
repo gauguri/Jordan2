@@ -1,0 +1,23 @@
+@model Order
+@{
+    ViewData["Title"] = "Order Confirmed";
+}
+
+<section class="cart-empty">
+    <h2>Order #@Model.Id confirmed</h2>
+    <p>Thanks for shopping with ShopLane. Your gear is being prepped for dispatch.</p>
+    <div style="margin:2rem 0;">
+        <h3>Summary</h3>
+        <ul style="list-style:none; padding:0; margin:1rem 0;">
+            @foreach (var line in Model.Lines)
+            {
+                <li style="margin-bottom:0.75rem;">
+                    <strong>@line.Product.Name</strong> × @line.Quantity
+                    <div style="color:var(--muted);">₹ @line.LineTotal.ToString("N0")</div>
+                </li>
+            }
+        </ul>
+        <p><strong>Total Paid: ₹ @Model.Total.ToString("N0")</strong></p>
+    </div>
+    <a class="button" asp-controller="Home" asp-action="Index">Continue shopping</a>
+</section>

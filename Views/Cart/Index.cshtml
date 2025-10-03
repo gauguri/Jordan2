@@ -1,0 +1,52 @@
+@model CartViewModel
+@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<section class="cart">
+    @if (!Model.Items.Any())
+    {
+        <div class="cart-empty">
+            <h2>Your cart is feeling light</h2>
+            <p>Add a few Jordan pieces to see them here.</p>
+            <a class="button" asp-controller="Home" asp-action="Index">Browse products</a>
+        </div>
+    }
+    else
+    {
+        <div class="cart-items">
+            @foreach (var item in Model.Items)
+            {
+                <article class="cart-item">
+                    <img src="@item.Product.Preview" alt="@item.Product.Name" />
+                    <div>
+                        <h3>@item.Product.Name</h3>
+                        <p>@item.Product.Brand</p>
+                        <p>Qty: @item.Quantity</p>
+                    </div>
+                    <div>
+                        <strong>₹ @item.LineTotal.ToString("N0")</strong>
+                        <form asp-action="Remove" method="post" style="margin-top:0.5rem;">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@item.Product.Id" />
+                            <button class="button secondary" type="submit">Remove</button>
+                        </form>
+                    </div>
+                </article>
+            }
+        </div>
+        <aside class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Total items: @Model.Items.Sum(i => i.Quantity)</p>
+            <p><strong>Grand total: ₹ @Model.Total.ToString("N0")</strong></p>
+            <form asp-action="Checkout" method="post">
+                @Html.AntiForgeryToken()
+                <button class="button" type="submit">Place order</button>
+            </form>
+            <form asp-action="Clear" method="post">
+                @Html.AntiForgeryToken()
+                <button class="button secondary" type="submit">Clear cart</button>
+            </form>
+        </aside>
+    }
+</section>

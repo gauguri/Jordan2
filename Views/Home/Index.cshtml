@@ -1,0 +1,50 @@
+@model HomeViewModel
+@{
+    ViewData["Title"] = "Jordan Collection";
+}
+
+<section>
+    <header class="section-header">
+        <h2>Fresh Drops</h2>
+        <p>The latest Jordan footwear and apparel curated for you.</p>
+    </header>
+    <div class="grid">
+        @foreach (var product in Model.Clothing)
+        {
+            <article class="product-card">
+                <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">
+                    <img src="@product.Preview" alt="@product.Name" loading="lazy" />
+                    <div class="card-body">
+                        <h3>@product.Name</h3>
+                        <p>@product.Brand</p>
+                        <strong>₹ @product.Price.ToString("N0")</strong>
+                        <span class="cta">View details →</span>
+                    </div>
+                </a>
+            </article>
+        }
+    </div>
+</section>
+
+<section>
+    <header class="section-header">
+        <h2>Style Elevators</h2>
+        <p>Complete the fit with Jumpman accessories.</p>
+    </header>
+    <div class="grid">
+        @foreach (var product in Model.Accessories)
+        {
+            <article class="product-card">
+                <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">
+                    <img src="@product.Preview" alt="@product.Name" loading="lazy" />
+                    <div class="card-body">
+                        <h3>@product.Name</h3>
+                        <p>@product.Brand</p>
+                        <strong>₹ @product.Price.ToString("N0")</strong>
+                        <span class="cta">View details →</span>
+                    </div>
+                </a>
+            </article>
+        }
+    </div>
+</section>
