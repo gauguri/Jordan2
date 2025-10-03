@@ -1,7 +1,7 @@
-using Jordan2.Models;
+using Jordan2.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Jordan2.Controllers;
+namespace Jordan2.UI.Controllers;
 
 public class ProductsController : Controller
 {

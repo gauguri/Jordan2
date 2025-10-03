@@ -1,6 +1,6 @@
-using Jordan2.Models;
+using Jordan2.Server.Models;
 
-namespace Jordan2.ViewModels;
+namespace Jordan2.Client.ViewModels;
 
 public class HomeViewModel
 {

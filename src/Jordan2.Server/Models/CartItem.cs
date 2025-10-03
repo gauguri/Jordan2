@@ -1,4 +1,4 @@
-namespace Jordan2.Models;
+namespace Jordan2.Server.Models;
 
 public class CartItem
 {

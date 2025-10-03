@@ -1,9 +1,9 @@
 using System.Linq;
-using Jordan2.Models;
-using Jordan2.ViewModels;
+using Jordan2.Server.Models;
+using Jordan2.Client.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Jordan2.Controllers;
+namespace Jordan2.UI.Controllers;
 
 public class CartController : Controller
 {

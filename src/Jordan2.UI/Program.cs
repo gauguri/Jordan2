@@ -1,4 +1,4 @@
-using Jordan2.Models;
+using Jordan2.Server.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

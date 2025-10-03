@@ -2,7 +2,7 @@ using System.Linq;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 
-namespace Jordan2.Models;
+namespace Jordan2.Server.Models;
 
 public class SessionCartService : ICartService
 {
